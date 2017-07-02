@@ -12,3 +12,4 @@
 /web-app/plugins
 /target
 .gradle
+.gitignore
