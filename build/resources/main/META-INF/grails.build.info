@@ -1,0 +1,6 @@
+#Sun, 02 Jul 2017 16:26:51 -0300
+
+info.app.version=0.1
+info.app.name=Organizador de tareas
+grails.env=test
+info.app.grailsVersion=3.3.0.RC1
