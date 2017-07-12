@@ -12,4 +12,8 @@
 /web-app/plugins
 /target
 .gradle
+<<<<<<< HEAD
 .gitignores
+=======
+.gitignore
+>>>>>>> 5722947f76740fdfa03b332e32e458e08eef3f21
