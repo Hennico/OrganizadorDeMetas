@@ -9,9 +9,9 @@ class SubMeta {
 	public String descripcion;
 	
 	public SubMeta (String nombre, String descripcion) {
-		subMetasOpocionales = new List<SubMeta>();
-		subMetasObligatorias = new List<SubMeta>();
-		listeners = new List<Objetivo>();
+		subMetasOpocionales = new ArrayList<SubMeta>();
+		subMetasObligatorias = new ArrayList<SubMeta>();
+		listeners = new ArrayList<Objetivo>();
 		
 		this.nombre = nombre;
 		this.descripcion = descripcion;
@@ -19,10 +19,10 @@ class SubMeta {
 	
 	public void agregarSubMeta(SubMeta subMeta, boolean obligatorio) {
 		if (estado == Estado.Cancelado || estado == Estado.Terminado) {
-			throw new CustomException("No se puede agregar tarea portque esta finalizada/cancelada");
+			throw new Exception("No se puede agregar tarea portque esta finalizada/cancelada");
 		}
 		if (estado != Estado.Pendiente && obligatorio) {
-			throw new CustomException("No se puede agregar tarea obligatoria cuando ya se comenzo");
+			throw new Exception("No se puede agregar tarea obligatoria cuando ya se comenzo");
 		}
 		
 		if (obligatorio) {
@@ -37,6 +37,10 @@ class SubMeta {
 			listener.notify();
 		}
 	}
+	
+	protected void agragarListener(Objetivo listener) {
+		listeners.add(listener)
+	}	
 	
 	protected boolean validarCambiarEstado(Estado nuevoEstado) {
 		switch(nuevoEstado) {
