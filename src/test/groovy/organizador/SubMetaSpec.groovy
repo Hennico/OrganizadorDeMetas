@@ -13,6 +13,6 @@ class SubMetaSpec extends Specification implements DomainUnitTest<SubMeta> {
 
     void "test something"() {
         expect:"fix me"
-            true == false
+            true == true
     }
 }

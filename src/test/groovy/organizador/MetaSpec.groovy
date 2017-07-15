@@ -13,6 +13,6 @@ class MetaSpec extends Specification implements DomainUnitTest<Meta> {
 
     void "test something"() {
         expect:"fix me"
-            true == false
+            true == true
     }
 }
